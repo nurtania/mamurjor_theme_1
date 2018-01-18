@@ -91,8 +91,8 @@ add_action('widgets_init','self');
 if ( !class_exists( 'redux-framework' ) && file_exists( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' ) ) {
     require_once( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' );
 }
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/redux-framework/sample/sample-config.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/redux-framework/sample/sample-config.php' );
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/redux-framework/sample/function-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/sample/function-config.php' );
 }
 
 }
