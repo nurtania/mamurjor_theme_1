@@ -2,26 +2,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function all_fuction(){
 
 // theme main pic 
@@ -105,6 +85,15 @@ if(!function_exists('self')){
 
 add_action('widgets_init','self');
 
+
+// redux
+
+if ( !class_exists( 'redux-framework' ) && file_exists( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/redux-framework/sample/sample-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/sample/sample-config.php' );
+}
 
 }
 
