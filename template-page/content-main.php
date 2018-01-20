@@ -26,7 +26,12 @@
 <?php 
 
 
+global $shafin;
 
+
+
+echo $shafin['content_num'];
+echo $shafin['mail'].'</br>';
 
 
 if($the_queryv->have_posts()):
