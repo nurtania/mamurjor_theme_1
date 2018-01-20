@@ -53,7 +53,7 @@ require_once('/inc/custome.php');
 require_once('/inc/init.php');
 
 
-
+//  side bar
 if(!function_exists('self')){
 	function self(){
 
@@ -94,6 +94,32 @@ if ( !class_exists( 'redux-framework' ) && file_exists( dirname( __FILE__ ) . '/
 if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/redux-framework/sample/function-config.php' ) ) {
     require_once( dirname( __FILE__ ) . '/redux-framework/sample/function-config.php' );
 }
+
+
+
+// custome post type 
+
+add_action('init','slider_post');
+
+function slider_post(){
+	register_post_type('slider', array(
+		'labels' => array(
+			'name' 				=> 'sliders',
+			'singular_name'		=> 'slider',
+			),
+		'public'				=> true ,
+
+		));
+}
+
+
+
+
+
+
+
+
+
 
 }
 
