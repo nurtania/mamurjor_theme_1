@@ -278,7 +278,7 @@
 
     // -> START Basic Fields
     Redux::setSection( $opt_name, array(
-        'title'            => __( 'Basic Fields', 'redux-framework-demo' ),
+        'title'            => __( 'setting theme option', 'redux-framework-demo' ),
         'id'               => 'basic',
         'desc'             => __( 'These are really basic fields!', 'redux-framework-demo' ),
         'customizer_width' => '400px',
@@ -286,55 +286,31 @@
     ) );
 
     Redux::setSection( $opt_name, array(
-        'title'            => __( 'Checkbox', 'redux-framework-demo' ),
-        'id'               => 'basic-checkbox',
+        'title'            => __( 'contact info', 'redux-framework-demo' ),
+        'id'               => 'contact_info',
         'subsection'       => true,
         'customizer_width' => '450px',
-        'desc'             => __( 'For full documentation on this field, visit: ', 'redux-framework-demo' ) . '<a href="//docs.reduxframework.com/core/fields/checkbox/" target="_blank">docs.reduxframework.com/core/fields/checkbox/</a>',
+        
+        
+
         'fields'           => array(
             array(
-                'id'       => 'opt-checkbox',
-                'type'     => 'checkbox',
-                'title'    => __( 'Checkbox Option', 'redux-framework-demo' ),
-                'subtitle' => __( 'No validation can be done on this field type', 'redux-framework-demo' ),
+                'id'       => 'content_num',
+                'type'     => 'text',
+                'title'    => __( 'Cell number ', 'redux-framework-demo' ),
+                'subtitle' => __( 'cell number give here ', 'redux-framework-demo' ),
                 'desc'     => __( 'This is the description field, again good for additional info.', 'redux-framework-demo' ),
-                'default'  => '1'// 1 = on | 0 = off
+                'default'  => '01712855203'// 1 = on | 0 = off
             ),
             array(
-                'id'       => 'opt-multi-check',
-                'type'     => 'checkbox',
-                'title'    => __( 'Multi Checkbox Option', 'redux-framework-demo' ),
-                'subtitle' => __( 'No validation can be done on this field type', 'redux-framework-demo' ),
+                'id'       => 'mail',
+                'type'     => 'text',
+                'title'    => __( 'mail ', 'redux-framework-demo' ),
+                'subtitle' => __( 'mail give here ', 'redux-framework-demo' ),
                 'desc'     => __( 'This is the description field, again good for additional info.', 'redux-framework-demo' ),
-                //Must provide key => value pairs for multi checkbox options
-                'options'  => array(
-                    '1' => 'Opt 1',
-                    '2' => 'Opt 2',
-                    '3' => 'Opt 3'
-                ),
-                //See how std has changed? you also don't need to specify opts that are 0.
-                'default'  => array(
-                    '1' => '1',
-                    '2' => '0',
-                    '3' => '0'
-                )
-            ),
-            array(
-                'id'       => 'opt-checkbox-data',
-                'type'     => 'checkbox',
-                'title'    => __( 'Multi Checkbox Option (with menu data)', 'redux-framework-demo' ),
-                'subtitle' => __( 'No validation can be done on this field type', 'redux-framework-demo' ),
-                'desc'     => __( 'This is the description field, again good for additional info.', 'redux-framework-demo' ),
-                'data'     => 'menu'
-            ),
-            array(
-                'id'       => 'opt-checkbox-sidebar',
-                'type'     => 'checkbox',
-                'title'    => __( 'Multi Checkbox Option (with sidebar data)', 'redux-framework-demo' ),
-                'subtitle' => __( 'No validation can be done on this field type', 'redux-framework-demo' ),
-                'desc'     => __( 'This is the description field, again good for additional info.', 'redux-framework-demo' ),
-                'data'     => 'sidebars'
-            ),
+                'default'  => 'shafinr23@gmail.com'// 1 = on | 0 = off
+            )
+            
         )
     ) );
 
@@ -478,7 +454,7 @@
     /**
      * Custom function for filtering the sections array. Good for child themes to override or add to the sections.
      * Simply include this function in the child themes functions.php file.
-     * NOTE: the defined constants for URLs, and directories will NOT be available at this point in a child theme,
+     * NOTE : the defined constants for URLs, and directories will NOT be available at this point in a child theme,
      * so you must use get_template_directory_uri() if you want to use any of the built in icons
      * */
     if ( ! function_exists( 'dynamic_section' ) ) {
