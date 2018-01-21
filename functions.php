@@ -104,11 +104,23 @@ add_action('init','slider_post');
 function slider_post(){
 	register_post_type('slider', array(
 		'labels' => array(
-			'name' 				=> 'sliders',
-			'singular_name'		=> 'slider',
+			'name' 				=> __('all sliders','textdomain'),
+			'singular_name'		=> __('slider','textdomain'),
+			'add_new'			=>	__('add new slider','textdomain'),
+			'add_new_item'		=>	__('add new sliders','textdomain'),
+			'search_items'		=>	__('search slider','textdomain'),
+			'edit_item'			=>	__('edit slider','textdomain'),
+			'all_items'			=>	__(' show all sliders','textdomain'),
+			'view_item'			=>	__('view slider','textdomain'),
+			'not_found'			=>	__('no slider found','textdomain'),
 			),
 		'public'				=> true ,
-
+		'publicly_queryable'	=>	true ,
+		'show_url'				=>	true,
+		'show_in_menu'			=>	true,
+		'menu_icon'				=> 'dashicons-slides',
+		'capability_type'		=> 'page',
+		'supports'				=>	array('title','thumbnail'),
 		));
 }
 
